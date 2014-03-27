@@ -70,7 +70,7 @@ namespace Decision_Making
                 product.variableCost = this.variableCostPerUnit.Value.ToString();
                 product.annualVolume = this.annualVolume.Value.ToString();
 
-                Product.SaveData(product);
+                DataSaver.SaveData(product);
                 this.Close();
             }
             else
