@@ -36,6 +36,7 @@
             this.variableCostPerUnit = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.annualVolume = new System.Windows.Forms.TextBox();
+            this.saveButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -104,11 +105,21 @@
             this.annualVolume.Size = new System.Drawing.Size(121, 20);
             this.annualVolume.TabIndex = 7;
             // 
+            // saveButton
+            // 
+            this.saveButton.Location = new System.Drawing.Point(229, 297);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.TabIndex = 8;
+            this.saveButton.Text = "Salveaza";
+            this.saveButton.UseVisualStyleBackColor = true;
+            // 
             // DataEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 332);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.annualVolume);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.variableCostPerUnit);
@@ -134,5 +145,6 @@
         private System.Windows.Forms.TextBox variableCostPerUnit;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox annualVolume;
+        private System.Windows.Forms.Button saveButton;
     }
 }
