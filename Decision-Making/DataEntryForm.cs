@@ -15,6 +15,18 @@ namespace Decision_Making
         public DataEntryForm()
         {
             InitializeComponent();
+            InitializeComboBox();
+        }
+
+        private void InitializeComboBox()
+        {
+            this.typeOfAction.Items.Add("Fabricare");
+            this.typeOfAction.Items.Add("Cumparare");
+        }
+
+        private void typeOfAction_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
