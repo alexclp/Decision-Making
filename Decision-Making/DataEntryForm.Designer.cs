@@ -101,6 +101,11 @@
             // 
             this.annualFixedCost.Enabled = false;
             this.annualFixedCost.Location = new System.Drawing.Point(183, 87);
+            this.annualFixedCost.Maximum = new decimal(new int[] {
+            -1981284353,
+            -1966660860,
+            0,
+            0});
             this.annualFixedCost.Name = "annualFixedCost";
             this.annualFixedCost.Size = new System.Drawing.Size(120, 20);
             this.annualFixedCost.TabIndex = 9;
@@ -109,6 +114,11 @@
             // 
             this.variableCostPerUnit.Enabled = false;
             this.variableCostPerUnit.Location = new System.Drawing.Point(183, 127);
+            this.variableCostPerUnit.Maximum = new decimal(new int[] {
+            -1981284353,
+            -1966660860,
+            0,
+            0});
             this.variableCostPerUnit.Name = "variableCostPerUnit";
             this.variableCostPerUnit.Size = new System.Drawing.Size(120, 20);
             this.variableCostPerUnit.TabIndex = 10;
@@ -117,6 +127,11 @@
             // 
             this.annualVolume.Enabled = false;
             this.annualVolume.Location = new System.Drawing.Point(183, 162);
+            this.annualVolume.Maximum = new decimal(new int[] {
+            -1981284353,
+            -1966660860,
+            0,
+            0});
             this.annualVolume.Name = "annualVolume";
             this.annualVolume.Size = new System.Drawing.Size(120, 20);
             this.annualVolume.TabIndex = 11;

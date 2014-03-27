@@ -71,6 +71,7 @@ namespace Decision_Making
                 product.annualVolume = this.annualVolume.Value.ToString();
 
                 Product.SaveData(product);
+                this.Close();
             }
             else
             {
