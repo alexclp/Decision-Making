@@ -63,7 +63,19 @@ namespace Decision_Making
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            if (checkEntryData() == true)
+            {
+                Product product = new Product();
+                product.annualCost = this.annualFixedCost.Value.ToString();
+                product.variableCost = this.variableCostPerUnit.Value.ToString();
+                product.annualVolume = this.annualVolume.Value.ToString();
 
+                Product.SaveData(product);
+            }
+            else
+            {
+                MessageBox.Show("Introduceti toate datele, va rog!");
+            }
         }
     }
 }
