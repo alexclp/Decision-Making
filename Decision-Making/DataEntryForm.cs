@@ -41,6 +41,26 @@ namespace Decision_Making
             }
         }
 
+        private bool checkEntryData()
+        {
+            if (this.typeOfAction.SelectedIndex == 0)
+            {
+                if (this.annualFixedCost.Value > 0 && this.variableCostPerUnit.Value > 0 && this.annualVolume > 0)
+                {
+                    return true;
+                }
+                return false;
+            } 
+            else
+            {
+                if (this.annualFixedCost.Value > 0 && this.annualVolume.Value > 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
         private void saveButton_Click(object sender, EventArgs e)
         {
 
