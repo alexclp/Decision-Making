@@ -17,18 +17,27 @@ namespace Decision_Making
             InitializeComponent();
         }
 
-        DataEntryForm dataEntryForm = new DataEntryForm();
+        
 
         private void insertDataButton_Click(object sender, EventArgs e)
         {
+            DataEntryForm dataEntryForm = new DataEntryForm();
             dataEntryForm.Show();
         }
 
-        AboutForm aboutForm = new AboutForm();
+        
 
         private void aboutButton_Click(object sender, EventArgs e)
         {
+            AboutForm aboutForm = new AboutForm();
             aboutForm.Show();
+        }
+
+        
+        private void analyzeButton_Click(object sender, EventArgs e)
+        {
+            AnalysingForm analysingForm = new AnalysingForm();
+            analysingForm.Show();
         }
     }
 }

@@ -17,6 +17,15 @@ namespace Decision_Making
         {
             InitializeComponent();
             InitializeComboBox();
+
+            try
+            {
+                LoadSavedData();
+            }
+            catch (System.IO.FileNotFoundException)
+            {
+                Console.WriteLine("Nu exista date precedente");
+            }
         }
 
         private void LoadSavedData()

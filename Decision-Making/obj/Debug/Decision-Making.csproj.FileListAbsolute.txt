@@ -9,3 +9,4 @@ C:\work\C#\Decision-Making\Decision-Making\obj\Debug\Decision-Making.exe
 C:\work\C#\Decision-Making\Decision-Making\obj\Debug\Decision-Making.pdb
 C:\work\C#\Decision-Making\Decision-Making\obj\Debug\Decision_Making.AboutForm.resources
 C:\work\C#\Decision-Making\Decision-Making\obj\Debug\Decision_Making.DataEntryForm.resources
+C:\work\C#\Decision-Making\Decision-Making\obj\Debug\Decision_Making.AnalysingForm.resources

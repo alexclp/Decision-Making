@@ -30,11 +30,12 @@
         {
             this.insertDataButton = new System.Windows.Forms.Button();
             this.aboutButton = new System.Windows.Forms.Button();
+            this.analyzeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // insertDataButton
             // 
-            this.insertDataButton.Location = new System.Drawing.Point(225, 150);
+            this.insertDataButton.Location = new System.Drawing.Point(225, 123);
             this.insertDataButton.Name = "insertDataButton";
             this.insertDataButton.Size = new System.Drawing.Size(122, 23);
             this.insertDataButton.TabIndex = 0;
@@ -52,11 +53,22 @@
             this.aboutButton.UseVisualStyleBackColor = true;
             this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
             // 
+            // analyzeButton
+            // 
+            this.analyzeButton.Location = new System.Drawing.Point(225, 152);
+            this.analyzeButton.Name = "analyzeButton";
+            this.analyzeButton.Size = new System.Drawing.Size(122, 23);
+            this.analyzeButton.TabIndex = 2;
+            this.analyzeButton.Text = "Analizeaza";
+            this.analyzeButton.UseVisualStyleBackColor = true;
+            this.analyzeButton.Click += new System.EventHandler(this.analyzeButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 352);
+            this.Controls.Add(this.analyzeButton);
             this.Controls.Add(this.aboutButton);
             this.Controls.Add(this.insertDataButton);
             this.Name = "MainForm";
@@ -69,6 +81,7 @@
 
         private System.Windows.Forms.Button insertDataButton;
         private System.Windows.Forms.Button aboutButton;
+        private System.Windows.Forms.Button analyzeButton;
     }
 }
 
