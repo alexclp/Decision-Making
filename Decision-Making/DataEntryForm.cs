@@ -19,6 +19,23 @@ namespace Decision_Making
             InitializeComboBox();
         }
 
+        private void LoadSavedData()
+        {
+            if (this.typeOfAction.SelectedIndex == 0)
+            {
+                Product current = DataSaver.LoadData("Fabricare");
+                this.annualFixedCost.Value = System.Convert.ToDecimal(current.annualCost);
+                this.variableCostPerUnit.Value = System.Convert.ToDecimal(current.variableCost);
+                this.annualVolume.Value = System.Convert.ToDecimal(current.annualVolume);
+            } 
+            else
+            {
+                Product current = DataSaver.LoadData("Cumparare");
+                this.annualFixedCost.Value = System.Convert.ToDecimal(current.annualCost);
+                this.annualVolume.Value = System.Convert.ToDecimal(current.annualVolume);
+            }
+        }
+
         private void InitializeComboBox()
         {
             this.typeOfAction.Items.Add("Fabricare");
@@ -70,7 +87,17 @@ namespace Decision_Making
                 product.variableCost = this.variableCostPerUnit.Value.ToString();
                 product.annualVolume = this.annualVolume.Value.ToString();
 
-                DataSaver.SaveData(product);
+                if (this.typeOfAction.SelectedIndex == 0)
+                {
+                    DataSaver.SaveData(product, "Fabricare");
+                }
+                else
+                {
+                    DataSaver.SaveData(product, "Cumparare");
+                }
+
+                MessageBox.Show("Am salvat!");
+
                 this.Close();
             }
             else
