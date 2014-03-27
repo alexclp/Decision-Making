@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Decision_Making
 {
@@ -26,7 +27,23 @@ namespace Decision_Making
 
         private void typeOfAction_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            if (this.typeOfAction.SelectedIndex == 0)
+            {
+                this.annualFixedCost.Enabled = true;
+                this.variableCostPerUnit.Enabled = true;
+                this.annualVolume.Enabled = true;
+            } 
+            else
+            {
+                this.annualFixedCost.Enabled = true;
+                this.variableCostPerUnit.Enabled = false;
+                this.annualVolume.Enabled = true;
+            }
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

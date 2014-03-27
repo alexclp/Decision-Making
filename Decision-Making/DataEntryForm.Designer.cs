@@ -31,12 +31,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.typeOfAction = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.annualFixedCost = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.variableCostPerUnit = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.annualVolume = new System.Windows.Forms.TextBox();
             this.saveButton = new System.Windows.Forms.Button();
+            this.annualFixedCost = new System.Windows.Forms.NumericUpDown();
+            this.variableCostPerUnit = new System.Windows.Forms.NumericUpDown();
+            this.annualVolume = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.annualFixedCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variableCostPerUnit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.annualVolume)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,13 +69,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Cost anual fix";
             // 
-            // annualFixedCost
-            // 
-            this.annualFixedCost.Location = new System.Drawing.Point(183, 86);
-            this.annualFixedCost.Name = "annualFixedCost";
-            this.annualFixedCost.Size = new System.Drawing.Size(121, 20);
-            this.annualFixedCost.TabIndex = 3;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -81,13 +77,6 @@
             this.label3.Size = new System.Drawing.Size(101, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Cost variabil/unitate";
-            // 
-            // variableCostPerUnit
-            // 
-            this.variableCostPerUnit.Location = new System.Drawing.Point(183, 122);
-            this.variableCostPerUnit.Name = "variableCostPerUnit";
-            this.variableCostPerUnit.Size = new System.Drawing.Size(121, 20);
-            this.variableCostPerUnit.TabIndex = 5;
             // 
             // label4
             // 
@@ -98,13 +87,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Unitati anuale (volum)";
             // 
-            // annualVolume
-            // 
-            this.annualVolume.Location = new System.Drawing.Point(183, 157);
-            this.annualVolume.Name = "annualVolume";
-            this.annualVolume.Size = new System.Drawing.Size(121, 20);
-            this.annualVolume.TabIndex = 7;
-            // 
             // saveButton
             // 
             this.saveButton.Location = new System.Drawing.Point(229, 297);
@@ -113,23 +95,51 @@
             this.saveButton.TabIndex = 8;
             this.saveButton.Text = "Salveaza";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
+            // annualFixedCost
+            // 
+            this.annualFixedCost.Enabled = false;
+            this.annualFixedCost.Location = new System.Drawing.Point(183, 87);
+            this.annualFixedCost.Name = "annualFixedCost";
+            this.annualFixedCost.Size = new System.Drawing.Size(120, 20);
+            this.annualFixedCost.TabIndex = 9;
+            // 
+            // variableCostPerUnit
+            // 
+            this.variableCostPerUnit.Enabled = false;
+            this.variableCostPerUnit.Location = new System.Drawing.Point(183, 127);
+            this.variableCostPerUnit.Name = "variableCostPerUnit";
+            this.variableCostPerUnit.Size = new System.Drawing.Size(120, 20);
+            this.variableCostPerUnit.TabIndex = 10;
+            // 
+            // annualVolume
+            // 
+            this.annualVolume.Enabled = false;
+            this.annualVolume.Location = new System.Drawing.Point(183, 162);
+            this.annualVolume.Name = "annualVolume";
+            this.annualVolume.Size = new System.Drawing.Size(120, 20);
+            this.annualVolume.TabIndex = 11;
             // 
             // DataEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 332);
-            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.annualVolume);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.variableCostPerUnit);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.annualFixedCost);
+            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.typeOfAction);
             this.Controls.Add(this.label1);
             this.Name = "DataEntryForm";
             this.Text = "DataEntry";
+            ((System.ComponentModel.ISupportInitialize)(this.annualFixedCost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.variableCostPerUnit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.annualVolume)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,11 +150,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox typeOfAction;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox annualFixedCost;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox variableCostPerUnit;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox annualVolume;
         private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.NumericUpDown annualFixedCost;
+        private System.Windows.Forms.NumericUpDown variableCostPerUnit;
+        private System.Windows.Forms.NumericUpDown annualVolume;
     }
 }
