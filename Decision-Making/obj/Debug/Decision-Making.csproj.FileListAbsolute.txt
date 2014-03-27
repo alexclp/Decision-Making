@@ -1,1 +1,9 @@
 C:\work\C#\Decision-Making\Decision-Making\bin\Debug\Decision-Making.exe.config
+C:\work\C#\Decision-Making\Decision-Making\bin\Debug\Decision-Making.exe
+C:\work\C#\Decision-Making\Decision-Making\bin\Debug\Decision-Making.pdb
+C:\work\C#\Decision-Making\Decision-Making\obj\Debug\Decision-Making.csprojResolveAssemblyReference.cache
+C:\work\C#\Decision-Making\Decision-Making\obj\Debug\Decision_Making.MainForm.resources
+C:\work\C#\Decision-Making\Decision-Making\obj\Debug\Decision_Making.Properties.Resources.resources
+C:\work\C#\Decision-Making\Decision-Making\obj\Debug\Decision-Making.csproj.GenerateResource.Cache
+C:\work\C#\Decision-Making\Decision-Making\obj\Debug\Decision-Making.exe
+C:\work\C#\Decision-Making\Decision-Making\obj\Debug\Decision-Making.pdb
