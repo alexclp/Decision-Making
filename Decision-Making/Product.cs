@@ -8,8 +8,9 @@ namespace Decision_Making
 {
     public class Product
     {
-        public string annualCost { get; set; }
-        public string variableCost { get; set; }
+        public string makingAnnualCost { get; set; }
+        public string makingVariableCost { get; set; }
+        public string buyingVariableCost { get; set; }
         public string annualVolume { get; set; }
     }
 }

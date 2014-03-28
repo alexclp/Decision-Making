@@ -16,7 +16,6 @@ namespace Decision_Making
         public DataEntryForm()
         {
             InitializeComponent();
-            InitializeComboBox();
 
             try
             {
@@ -30,61 +29,28 @@ namespace Decision_Making
 
         private void LoadSavedData()
         {
-            if (this.typeOfAction.SelectedIndex == 0)
-            {
-                Product current = DataSaver.LoadData("Fabricare");
-                this.annualFixedCost.Value = System.Convert.ToDecimal(current.annualCost);
-                this.variableCostPerUnit.Value = System.Convert.ToDecimal(current.variableCost);
-                this.annualVolume.Value = System.Convert.ToDecimal(current.annualVolume);
-            } 
-            else
-            {
-                Product current = DataSaver.LoadData("Cumparare");
-                this.annualFixedCost.Value = System.Convert.ToDecimal(current.annualCost);
-                this.annualVolume.Value = System.Convert.ToDecimal(current.annualVolume);
-            }
-        }
+            Product product = new Product();
+            product = DataSaver.LoadData();
 
-        private void InitializeComboBox()
-        {
-            this.typeOfAction.Items.Add("Fabricare");
-            this.typeOfAction.Items.Add("Cumparare");
-        }
-
-        private void typeOfAction_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (this.typeOfAction.SelectedIndex == 0)
-            {
-                this.annualFixedCost.Enabled = true;
-                this.variableCostPerUnit.Enabled = true;
-                this.annualVolume.Enabled = true;
-            } 
-            else
-            {
-                this.annualFixedCost.Enabled = true;
-                this.variableCostPerUnit.Enabled = false;
-                this.annualVolume.Enabled = true;
-            }
+            this.annualMakingCost.Value = System.Convert.ToDecimal(product.makingAnnualCost);
+            this.buyingVariableCost.Value = System.Convert.ToDecimal(product.buyingVariableCost);
+            this.makingVariableCost.Value = System.Convert.ToDecimal(makingVariableCost);
+            this.annualVolume.Value = System.Convert.ToDecimal(product.annualVolume);
         }
 
         private bool checkEntryData()
         {
-            if (this.typeOfAction.SelectedIndex == 0)
+            bool result = false;
+
+            if (this.annualMakingCost.Value > 0 &&
+                this.buyingVariableCost.Value > 0 &&
+                this.makingVariableCost.Value > 0 &&
+                this.annualVolume.Value > 0)
             {
-                if (this.annualFixedCost.Value > 0 && this.variableCostPerUnit.Value > 0 && this.annualVolume.Value > 0)
-                {
-                    return true;
-                }
-                return false;
-            } 
-            else
-            {
-                if (this.annualFixedCost.Value > 0 && this.annualVolume.Value > 0)
-                {
-                    return true;
-                }
-                return false;
+                result = true;
             }
+
+            return result;
         }
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -92,25 +58,12 @@ namespace Decision_Making
             if (checkEntryData() == true)
             {
                 Product product = new Product();
-                product.annualCost = this.annualFixedCost.Value.ToString();
-                product.variableCost = this.variableCostPerUnit.Value.ToString();
+                product.annualVolume = this.annualMakingCost.Value.ToString();
+                product.buyingVariableCost = this.buyingVariableCost.Value.ToString();
+                product.makingVariableCost = this.makingVariableCost.Value.ToString();
                 product.annualVolume = this.annualVolume.Value.ToString();
 
-                if (this.typeOfAction.SelectedIndex == 0)
-                {
-                    DataSaver.SaveData(product, "Fabricare");
-                }
-                else
-                {
-                    DataSaver.SaveData(product, "Cumparare");
-                }
-
-                MessageBox.Show("Am salvat!");
-
-                MainForm form = new MainForm();
-
-
-                this.Close();
+                DataSaver.SaveData(product);
             }
             else
             {

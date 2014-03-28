@@ -8,21 +8,21 @@ namespace Decision_Making
 {
     class DataSaver
     {
-        public static void SaveData(Product product, string fileName)
+        public static void SaveData(Product product)
         {
+            string path = "Product.xml";
+
             System.Xml.Serialization.XmlSerializer writer =
             new System.Xml.Serialization.XmlSerializer(typeof(Product));
-
-            string path = fileName + ".xml";
 
             System.IO.StreamWriter file = new System.IO.StreamWriter(path);
             writer.Serialize(file, product);
             file.Close();
         }
 
-        public static Product LoadData(string fileName)
+        public static Product LoadData()
         {
-            string path = fileName + ".xml";
+            string path = "Product.xml";
 
             System.Xml.Serialization.XmlSerializer reader =
                 new System.Xml.Serialization.XmlSerializer(typeof(Product));
