@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Product xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <makingAnnualCost>System.Windows.Forms.NumericUpDown, Minimum = 0, Maximum = 100</makingAnnualCost>
+  <makingAnnualCost>123</makingAnnualCost>
   <makingVariableCost>33</makingVariableCost>
   <buyingVariableCost>123</buyingVariableCost>
   <annualVolume>333</annualVolume>
