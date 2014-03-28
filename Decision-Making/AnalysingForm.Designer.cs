@@ -30,6 +30,7 @@
         {
             this.costsGridView = new System.Windows.Forms.DataGridView();
             this.resultTextBox = new System.Windows.Forms.RichTextBox();
+            this.launchGraphicForm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.costsGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,11 +51,22 @@
             this.resultTextBox.TabIndex = 1;
             this.resultTextBox.Text = "";
             // 
+            // launchGraphicForm
+            // 
+            this.launchGraphicForm.Location = new System.Drawing.Point(277, 338);
+            this.launchGraphicForm.Name = "launchGraphicForm";
+            this.launchGraphicForm.Size = new System.Drawing.Size(75, 23);
+            this.launchGraphicForm.TabIndex = 2;
+            this.launchGraphicForm.Text = "Grafic";
+            this.launchGraphicForm.UseVisualStyleBackColor = true;
+            this.launchGraphicForm.Click += new System.EventHandler(this.launchGraphicForm_Click);
+            // 
             // AnalysingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 373);
+            this.Controls.Add(this.launchGraphicForm);
             this.Controls.Add(this.resultTextBox);
             this.Controls.Add(this.costsGridView);
             this.Name = "AnalysingForm";
@@ -68,6 +80,7 @@
 
         private System.Windows.Forms.DataGridView costsGridView;
         private System.Windows.Forms.RichTextBox resultTextBox;
+        private System.Windows.Forms.Button launchGraphicForm;
 
     }
 }

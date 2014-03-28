@@ -30,6 +30,7 @@ namespace Decision_Making
             catch (System.IO.FileNotFoundException)
             {
                 MessageBox.Show("Nu exista date!");
+                this.launchGraphicForm.Enabled = false;
                 return;
             }
 
@@ -62,9 +63,7 @@ namespace Decision_Making
                     }
 
                     toShow += String.Format("Pentru o cantitate de {0}, alegerea este indiferenta. La un volum anual mai mic de {1}, este recomandata cumpararea produsului, iar la un volum anual mai mare, fabricarea lui.", breakeven, breakeven);
-                    this.resultTextBox.Text = toShow;
-
-                    
+                    this.resultTextBox.Text = toShow;    
                 }
             }
             
@@ -89,6 +88,12 @@ namespace Decision_Making
             decimal result = (System.Convert.ToDecimal(product.makingAnnualCost) / Math.Abs(System.Convert.ToDecimal(product.buyingVariableCost) - System.Convert.ToDecimal(product.makingVariableCost)));
             result = Math.Round(result);
             return result.ToString();
+        }
+
+        private void launchGraphicForm_Click(object sender, EventArgs e)
+        {
+            GraphicForm form = new GraphicForm();
+            form.Show();
         }
     }
 }
