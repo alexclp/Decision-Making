@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.costsGridView = new System.Windows.Forms.DataGridView();
+            this.resultTextBox = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.costsGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,11 +42,20 @@
             this.costsGridView.Size = new System.Drawing.Size(574, 150);
             this.costsGridView.TabIndex = 0;
             // 
+            // resultTextBox
+            // 
+            this.resultTextBox.Location = new System.Drawing.Point(24, 179);
+            this.resultTextBox.Name = "resultTextBox";
+            this.resultTextBox.Size = new System.Drawing.Size(574, 113);
+            this.resultTextBox.TabIndex = 1;
+            this.resultTextBox.Text = "";
+            // 
             // AnalysingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 373);
+            this.Controls.Add(this.resultTextBox);
             this.Controls.Add(this.costsGridView);
             this.Name = "AnalysingForm";
             this.Text = "AnalysingForm";
@@ -57,6 +67,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView costsGridView;
+        private System.Windows.Forms.RichTextBox resultTextBox;
 
     }
 }

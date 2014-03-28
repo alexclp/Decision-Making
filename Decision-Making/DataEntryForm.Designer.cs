@@ -118,6 +118,11 @@
             // annualMakingCost
             // 
             this.annualMakingCost.Location = new System.Drawing.Point(379, 25);
+            this.annualMakingCost.Maximum = new decimal(new int[] {
+            -1981284353,
+            -1966660860,
+            0,
+            0});
             this.annualMakingCost.Name = "annualMakingCost";
             this.annualMakingCost.Size = new System.Drawing.Size(120, 20);
             this.annualMakingCost.TabIndex = 13;
@@ -134,6 +139,11 @@
             // makingVariableCost
             // 
             this.makingVariableCost.Location = new System.Drawing.Point(378, 53);
+            this.makingVariableCost.Maximum = new decimal(new int[] {
+            -1981284353,
+            -1966660860,
+            0,
+            0});
             this.makingVariableCost.Name = "makingVariableCost";
             this.makingVariableCost.Size = new System.Drawing.Size(120, 20);
             this.makingVariableCost.TabIndex = 16;

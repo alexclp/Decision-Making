@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Product xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <makingAnnualCost>123</makingAnnualCost>
-  <makingVariableCost>33</makingVariableCost>
-  <buyingVariableCost>123</buyingVariableCost>
-  <annualVolume>333</annualVolume>
+  <makingAnnualCost>150000</makingAnnualCost>
+  <makingVariableCost>60</makingVariableCost>
+  <buyingVariableCost>80</buyingVariableCost>
+  <annualVolume>12000</annualVolume>
 </Product>
