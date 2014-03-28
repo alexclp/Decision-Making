@@ -12,14 +12,17 @@ namespace Decision_Making
 {
     public partial class MainForm : Form
     {
+        bool firstRun = true;
+
         public MainForm()
         {
             InitializeComponent();
             AddColumnsToTable();
-            FillData();
+            FillData(this.totalCosts);
+            this.totalCosts.Refresh();
         }
 
-        private void FillData()
+        public static void FillData(DataGridView totalCosts)
         {
             Product buying = null;
             Product making = null;
@@ -39,25 +42,27 @@ namespace Decision_Making
             {
                 if (buying != null)
                 {
-                    this.totalCosts.Rows.Insert(0, "Cumparare", "0", buying.variableCost, buying.annualVolume);
+                    totalCosts.Rows.Insert(0, "Cumparare", "0", buying.variableCost, buying.annualVolume);
                 }
 
                 if (making != null)
                 {
-                    this.totalCosts.Rows.Insert(1, "Fabricare", making.annualCost, making.variableCost, making.annualVolume);
+                    totalCosts.Rows.Insert(1, "Fabricare", making.annualCost, making.variableCost, making.annualVolume);
                 }
             }
         }
 
         private void AddColumnsToTable()
         {
-            this.totalCosts.Columns.Add("Tip", "Tip");
-            this.totalCosts.Columns.Add("Cost fix anual", "Cost fix anual");
-            this.totalCosts.Columns.Add("Cost variabil/unitate", "Cost variabil/unitate");
-            this.totalCosts.Columns.Add("Volum anual(unitati)", "Volum anual(unitati)");
+            if (firstRun)
+            {
+                this.totalCosts.Columns.Add("Tip", "Tip");
+                this.totalCosts.Columns.Add("Cost fix anual", "Cost fix anual");
+                this.totalCosts.Columns.Add("Cost variabil/unitate", "Cost variabil/unitate");
+                this.totalCosts.Columns.Add("Volum anual(unitati)", "Volum anual(unitati)");
 
-            this.totalCosts.Rows.Add();
-            this.totalCosts.Rows.Add();
+                firstRun = false;
+            }
         }
 
         private void insertDataButton_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Product xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <annualCost>123</annualCost>
-  <variableCost>123</variableCost>
+  <annualCost>2222</annualCost>
+  <variableCost>2</variableCost>
   <annualVolume>123</annualVolume>
 </Product>

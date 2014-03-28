@@ -107,6 +107,9 @@ namespace Decision_Making
 
                 MessageBox.Show("Am salvat!");
 
+                MainForm form = new MainForm();
+
+
                 this.Close();
             }
             else

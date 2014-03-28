@@ -29,6 +29,7 @@ namespace Decision_Making
             System.IO.StreamReader file = new System.IO.StreamReader(path);
             Product product = new Product();
             product = (Product)reader.Deserialize(file);
+            file.Close();
 
             return product;
         }
