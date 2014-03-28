@@ -16,6 +16,18 @@ namespace Decision_Making
         {
             InitializeComponent();
             DrawChart();
+
+            WriteExplanation();
+        }
+        
+        private void WriteExplanation()
+        {
+            Product product = new Product();
+            product = DataSaver.LoadData();
+
+            string breakeven = Product.ComputeBreakEven(product);
+
+            this.explanation.Text = String.Format("Dupa cum se poate observa si pe grafic, punctul unde decisiv este determinat de intersectia pe grafic in punctul X = {0}.", breakeven);
         }
 
         private void DrawChart()
@@ -33,10 +45,10 @@ namespace Decision_Making
             this.lineChart.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
 
             Int64 sum = 0;
-            for (int i = 0; i < annualVolume; ++i)
+            for (int i = 1; i < annualVolume; ++i)
             {
-                this.lineChart.Series[0].Points.AddXY(i, sum);
                 sum = i * System.Convert.ToInt32(product.buyingVariableCost);
+                this.lineChart.Series[0].Points.AddXY(i, sum);
             }
 
             this.lineChart.Series.Add("Cost fix fabricare");
@@ -45,7 +57,7 @@ namespace Decision_Making
             sum = 0;
             Int64 toAdd = System.Convert.ToInt64(product.makingAnnualCost);
             Int64 toMultiply = System.Convert.ToInt64(product.makingVariableCost);
-            for (int i = 0; i < annualVolume; ++i)
+            for (int i = 1; i < annualVolume; ++i)
             {
                 sum = toAdd + i * toMultiply;
                 this.lineChart.Series[1].Points.AddXY(i, sum);
@@ -53,7 +65,7 @@ namespace Decision_Making
 
             this.lineChart.Series.Add("Cost variabil fabricare");
             this.lineChart.Series[2].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            for (int i = 0; i < annualVolume; ++i)
+            for (int i = 1; i < annualVolume; ++i)
             {
                 this.lineChart.Series[2].Points.AddXY(i, toAdd);
             }
