@@ -31,11 +31,13 @@
             this.insertDataButton = new System.Windows.Forms.Button();
             this.aboutButton = new System.Windows.Forms.Button();
             this.analyzeButton = new System.Windows.Forms.Button();
+            this.totalCosts = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.totalCosts)).BeginInit();
             this.SuspendLayout();
             // 
             // insertDataButton
             // 
-            this.insertDataButton.Location = new System.Drawing.Point(225, 123);
+            this.insertDataButton.Location = new System.Drawing.Point(225, 211);
             this.insertDataButton.Name = "insertDataButton";
             this.insertDataButton.Size = new System.Drawing.Size(122, 23);
             this.insertDataButton.TabIndex = 0;
@@ -45,7 +47,7 @@
             // 
             // aboutButton
             // 
-            this.aboutButton.Location = new System.Drawing.Point(225, 179);
+            this.aboutButton.Location = new System.Drawing.Point(225, 269);
             this.aboutButton.Name = "aboutButton";
             this.aboutButton.Size = new System.Drawing.Size(122, 23);
             this.aboutButton.TabIndex = 1;
@@ -55,7 +57,7 @@
             // 
             // analyzeButton
             // 
-            this.analyzeButton.Location = new System.Drawing.Point(225, 152);
+            this.analyzeButton.Location = new System.Drawing.Point(225, 240);
             this.analyzeButton.Name = "analyzeButton";
             this.analyzeButton.Size = new System.Drawing.Size(122, 23);
             this.analyzeButton.TabIndex = 2;
@@ -63,16 +65,29 @@
             this.analyzeButton.UseVisualStyleBackColor = true;
             this.analyzeButton.Click += new System.EventHandler(this.analyzeButton_Click);
             // 
+            // totalCosts
+            // 
+            this.totalCosts.AllowUserToAddRows = false;
+            this.totalCosts.AllowUserToDeleteRows = false;
+            this.totalCosts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.totalCosts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.totalCosts.Location = new System.Drawing.Point(12, 12);
+            this.totalCosts.Name = "totalCosts";
+            this.totalCosts.Size = new System.Drawing.Size(548, 193);
+            this.totalCosts.TabIndex = 3;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 352);
+            this.Controls.Add(this.totalCosts);
             this.Controls.Add(this.analyzeButton);
             this.Controls.Add(this.aboutButton);
             this.Controls.Add(this.insertDataButton);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            ((System.ComponentModel.ISupportInitialize)(this.totalCosts)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -82,6 +97,7 @@
         private System.Windows.Forms.Button insertDataButton;
         private System.Windows.Forms.Button aboutButton;
         private System.Windows.Forms.Button analyzeButton;
+        private System.Windows.Forms.DataGridView totalCosts;
     }
 }
 
