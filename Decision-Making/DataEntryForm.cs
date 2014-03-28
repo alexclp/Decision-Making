@@ -34,7 +34,7 @@ namespace Decision_Making
 
             this.annualMakingCost.Value = System.Convert.ToDecimal(product.makingAnnualCost);
             this.buyingVariableCost.Value = System.Convert.ToDecimal(product.buyingVariableCost);
-            this.makingVariableCost.Value = System.Convert.ToDecimal(makingVariableCost);
+            this.makingVariableCost.Value = System.Convert.ToDecimal(product.makingVariableCost);
             this.annualVolume.Value = System.Convert.ToDecimal(product.annualVolume);
         }
 
@@ -58,12 +58,15 @@ namespace Decision_Making
             if (checkEntryData() == true)
             {
                 Product product = new Product();
-                product.annualVolume = this.annualMakingCost.Value.ToString();
+                product.makingAnnualCost = this.annualMakingCost.Value.ToString();
                 product.buyingVariableCost = this.buyingVariableCost.Value.ToString();
                 product.makingVariableCost = this.makingVariableCost.Value.ToString();
                 product.annualVolume = this.annualVolume.Value.ToString();
 
                 DataSaver.SaveData(product);
+                MessageBox.Show("Am salvat!");
+
+                this.Close();
             }
             else
             {

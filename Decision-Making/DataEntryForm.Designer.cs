@@ -84,7 +84,6 @@
             // 
             // buyingVariableCost
             // 
-            this.buyingVariableCost.Enabled = false;
             this.buyingVariableCost.Location = new System.Drawing.Point(199, 53);
             this.buyingVariableCost.Maximum = new decimal(new int[] {
             -1981284353,
@@ -97,7 +96,6 @@
             // 
             // annualVolume
             // 
-            this.annualVolume.Enabled = false;
             this.annualVolume.Location = new System.Drawing.Point(199, 89);
             this.annualVolume.Maximum = new decimal(new int[] {
             -1981284353,
